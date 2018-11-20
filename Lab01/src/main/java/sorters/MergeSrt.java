@@ -1,70 +1,69 @@
 package sorters;
 
-//import fillers.ArrPrinter;
+import fillers.ArrPrinter;
+
 
 import java.util.Arrays;
 
 public class MergeSrt implements ObjSavForM {
-    public int[] mergeArrSrt (int arr[]) {
-        int[] L = Arrays.copyOf(arr, arr.length / 2);
-        int[] R = Arrays.copyOfRange(arr, arr.length / 2, arr.length);
 
-        arS.srtArr(L);
-        arS.srtArr(R);
 
-        int[] narr = new int[L.length + R.length];
+    public int[] meArrSrt(int arr[]) {
+        if (arr.length < 2){
+            return arr;
+        }
+        int middle = arr.length / 2;
 
-        System.arraycopy(L, 0, narr, 0, L.length);
-        System.arraycopy(R, 0, narr, L.length, R.length);
-        arS.srtArr(narr);
+        return merge (arS.srtArr(Arrays.copyOfRange(arr,0,middle)),
+                arS.srtArr(Arrays.copyOfRange(arr,middle,arr.length)));
 
-        return narr;
+    }
+    public int[] meBubSta(int arr[]) {
+        if (arr.length < 2){
+            return arr;
+        }
+        int middle = arr.length / 2;
+
+        return merge (bSta.srtBubSta(Arrays.copyOfRange(arr,0,middle)),
+                bSta.srtBubSta(Arrays.copyOfRange(arr,middle,arr.length)));
     }
 
-    public int[] mergeBubbleSrtFrSt(int arr[]) {
-        int[] L = Arrays.copyOf(arr, arr.length / 2);
-        int[] R = Arrays.copyOfRange(arr, arr.length / 2, arr.length);
-        bSta.srtBubSta(L);
-        bSta.srtBubSta(R);
+    public int[] meBubEnd(int arr[]) {
+        if (arr.length < 2){
+            return arr;
+        }
+        int middle = arr.length / 2;
 
-        int[] narr = new int[L.length + R.length];
-
-        System.arraycopy(L, 0, narr, 0, L.length);
-        System.arraycopy(R, 0, narr, L.length, R.length);
-        bSta.srtBubSta(narr);
-
-        return narr;
+        return merge (bEnd.srtBubEnd(Arrays.copyOfRange(arr,0,middle)),
+                bEnd.srtBubEnd(Arrays.copyOfRange(arr,middle,arr.length)));
     }
 
-    public int[] mergeBubbleSrtFrEnd(int arr[]) {
-        int[] L = Arrays.copyOf(arr, arr.length / 2);
-        int[] R = Arrays.copyOfRange(arr, arr.length / 2, arr.length);
+    public int[] meQuick(int arr[]) {
+        if (arr.length < 2){
+            return arr;
+        }
+        int middle = arr.length / 2;
 
-        bEnd.srtBubEnd(L);
-        bEnd.srtBubEnd(R);
-
-        int[] narr = new int[L.length + R.length];
-
-        System.arraycopy(L, 0, narr, 0, L.length);
-        System.arraycopy(R, 0, narr, L.length, R.length);
-        bEnd.srtBubEnd(narr);
-
-        return narr;
+        return merge (quSrt.srtQuick(Arrays.copyOfRange(arr,0,middle)),
+                quSrt.srtQuick(Arrays.copyOfRange(arr,middle,arr.length)));
     }
 
-    public int[] mergeQuickSrt(int arr[]) {
-        int[] L = Arrays.copyOf(arr, arr.length / 2);
-        int[] R = Arrays.copyOfRange(arr, arr.length / 2, arr.length);
-
-        quSrt.srtQuick(L);
-        quSrt.srtQuick(R);
-
-        int[] narr = new int[L.length + R.length];
-
-        System.arraycopy(L, 0, narr, 0, L.length);
-        System.arraycopy(R, 0, narr, L.length, R.length);
-        quSrt.srtQuick(narr);
-
-        return narr;
+    private int[] merge (int[] part1, int[] part2){
+        int len_1 = part1.length, len_2 = part2.length;
+        int a = 0, b = 0, len = len_1 + len_2; // a, b - счетчики в массивах
+        int[] result = new int[len];
+        for (int i = 0; i < len; i++) {
+            if (b < len_2 && a < len_1) {
+                if (part1[a] > part2[b]) result[i] = part2[b++];
+                else result[i] = part1[a++];
+            } else if (b < len_2) {
+                result[i] = part2[b++];
+            } else {
+                result[i] = part1[a++];
+            }
+        }
+        ArrPrinter.arrPr(result);
+        return result;
     }
+
 }

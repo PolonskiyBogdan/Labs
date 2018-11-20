@@ -137,7 +137,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerArrSrtGR() {
         long start = System.nanoTime();
-        meSrt.mergeArrSrt(arrGr.arrGenR());
+        meSrt.meArrSrt(arrGr.arrGenR());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -145,7 +145,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerArrSrtMiMa() {
         long start = System.nanoTime();
-        meSrt.mergeArrSrt(MiMa.arrMiMa());
+        meSrt.meArrSrt(MiMa.arrMiMa());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -153,7 +153,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerArrSrtMiMaRx() {
         long start = System.nanoTime();
-        meSrt.mergeArrSrt(MiMaRx.arrMiMaRX());
+        meSrt.meArrSrt(MiMaRx.arrMiMaRX());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -161,7 +161,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerArrSrtMaMi() {
         long start = System.nanoTime();
-        meSrt.mergeArrSrt(MaMi.arrMaMi());
+        meSrt.meArrSrt(MaMi.arrMaMi());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -170,7 +170,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubStaGR() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrSt(arrGr.arrGenR());
+        meSrt.meBubSta(arrGr.arrGenR());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -178,7 +178,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubStaMiMa() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrSt(MiMa.arrMiMa());
+        meSrt.meBubSta(MiMa.arrMiMa());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -186,7 +186,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubStaMiMaRx() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrSt(MiMaRx.arrMiMaRX());
+        meSrt.meBubSta(MiMaRx.arrMiMaRX());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -194,7 +194,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubStaMaMi() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrSt(MaMi.arrMaMi());
+        meSrt.meBubSta(MaMi.arrMaMi());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -203,7 +203,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubEndGR() {
         long start = System.nanoTime();
-        meSrt.mergeArrSrt(arrGr.arrGenR());
+        meSrt.meArrSrt(arrGr.arrGenR());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -211,7 +211,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubEndMiMa() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrEnd(MiMa.arrMiMa());
+        meSrt.meBubEnd(MiMa.arrMiMa());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -219,7 +219,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubEndMiMaRx() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrEnd(MiMaRx.arrMiMaRX());
+        meSrt.meBubEnd(MiMaRx.arrMiMaRX());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -227,7 +227,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerBubEndMaMi() {
         long start = System.nanoTime();
-        meSrt.mergeBubbleSrtFrEnd(MaMi.arrMaMi());
+        meSrt.meBubEnd(MaMi.arrMaMi());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -236,7 +236,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerQuickGR() {
         long start = System.nanoTime();
-        meSrt.mergeQuickSrt(arrGr.arrGenR());
+        meSrt.meQuick(arrGr.arrGenR());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -244,7 +244,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerQuickMiMa() {
         long start = System.nanoTime();
-        meSrt.mergeQuickSrt(MiMa.arrMiMa());
+        meSrt.meQuick(MiMa.arrMiMa());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -252,7 +252,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerQuickMiMaRx() {
         long start = System.nanoTime();
-        meSrt.mergeQuickSrt(MiMaRx.arrMiMaRX());
+        meSrt.meQuick(MiMaRx.arrMiMaRX());
         long end = System.nanoTime();
 
         System.out.println(end - start);
@@ -260,7 +260,7 @@ public class Analyze implements ObjectSaver {
 
     public void anMerQuickMaMi() {
         long start = System.nanoTime();
-        meSrt.mergeQuickSrt(MaMi.arrMaMi());
+        meSrt.meQuick(MaMi.arrMaMi());
         long end = System.nanoTime();
 
         System.out.println(end - start);
