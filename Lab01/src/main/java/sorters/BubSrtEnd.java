@@ -6,10 +6,8 @@ import java.util.Arrays;
 public class BubSrtEnd {
     public int[] srtBubEnd(int arr[]) {
         int temp;
-        int l =0;
-        int r = arr.length -1;
-        for (int i = r; i > l; i--) {
-            for (int j = l; j < r; j++) {
+        for (int i = arr.length -1; i > 0; i--) {
+            for (int j = 0; j < arr.length -1; j++) {
                 System.out.print(Arrays.toString(arr) + " ");
                 System.out.println("j =" + j + " i =" + i);
 
