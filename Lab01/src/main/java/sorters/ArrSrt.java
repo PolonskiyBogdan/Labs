@@ -1,13 +1,13 @@
 package sorters;
 
-import fillers.ArrPrinter;
+
 import java.util.Arrays;
 
-public class ArrSrt {
+public class ArrSrt extends Sorter {
     public int[] srtArr(int arr[]) {
         Arrays.sort(arr);
 
-        ArrPrinter.arrPr(arr);
+        System.out.print(Arrays.toString(arr) + " ");
         return arr;
     }
 }

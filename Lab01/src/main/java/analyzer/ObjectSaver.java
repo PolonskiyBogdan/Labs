@@ -10,9 +10,4 @@ public interface ObjectSaver {
     MergeSrt meSrt = new MergeSrt();
     QuickSrt quSrt = new QuickSrt();
 
-    ArrGR arrGr = new ArrGR();
-    MinMax MiMa = new MinMax();
-    MinMaxRX MiMaRx = new MinMaxRX();
-    MaxMin MaMi = new MaxMin();
-
 }

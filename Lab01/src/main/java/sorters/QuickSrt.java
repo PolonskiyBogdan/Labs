@@ -1,13 +1,13 @@
 package sorters;
 
-import fillers.ArrPrinter;
+import java.util.Arrays;
 import java.util.Random;
 
-public class QuickSrt {
+public class QuickSrt extends Sorter {
     public int[] srtQuick(int arr[]) {
         qSort(arr, 0, arr.length-1);
 
-        ArrPrinter.arrPr(arr);
+        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
 
