@@ -1,10 +1,20 @@
 package fillers;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.Arrays;
 import java.util.Random;
 
 public class Fillers {
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    private @interface SpecAnot{
+        String name();
+    }
 
+    @SpecAnot(name ="Random Array")
     public static int[] arrGenR() {
 //        int arrGR[] = { 5,1,4,2,8,0,2 };
         int[] arrGR = new int[6];
@@ -15,7 +25,7 @@ public class Fillers {
         System.out.println(Arrays.toString(arrGR) + " ");
         return arrGR;
     }
-
+    @SpecAnot(name ="from Maximum to Minimum")
     public static int[] arrMaMi() {
 
         int[] arr = arrGenR();
@@ -32,6 +42,7 @@ public class Fillers {
         return arr;
     }
 
+    @SpecAnot(name ="from Maximum to ")
     public static int[] arrMiMa()  {
         int[] arr = arrGenR();
         Arrays.sort(arr);
@@ -39,6 +50,7 @@ public class Fillers {
         return arr;
     }
 
+    @SpecAnot(name ="from Maximum to Minimum + Random number")
     public static int[] arrMiMaRX() {
         int[] arr = arrGenR();
         int[] narr = Arrays.copyOf(arr, arr.length + 1);
