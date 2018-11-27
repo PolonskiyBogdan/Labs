@@ -3,7 +3,9 @@ package sorters;
 import java.util.Arrays;
 
 /**
- *  Main is a class where Analyze methods are summoned <br>
+ * Merge Sort is a Divide and Conquer algorithm.<br>
+ * It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.<br>
+ * Main is a class where Analyze methods are summoned <br>
  * @author Polonskiy
  * @version 1.2
  */
