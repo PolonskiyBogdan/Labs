@@ -1,4 +1,6 @@
 import analyzer.Analyze;
+import static ReflectionAnalyzer.RefAnalyze.refFill;
+import static fillers.Fillers.*;
 
 /**
  *  Main is a class where Analyze methods are summoned <br>
@@ -15,7 +17,11 @@ public class Main {
      */
     public static void main(String[] args) {
         Analyze a = new Analyze();
-
+        arrGenR();
+        arrMaMi();
+        arrMiMa();
+        arrMiMaRX();
+        refFill();
 
 //       a.anArrSrtGR();
 //       a.anArrSrtMiMa();
