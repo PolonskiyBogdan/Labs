@@ -18,18 +18,6 @@ public class Fillers {
     private static int arrGR[] = new int[6];
 
     /**
-     * Created annotation <br>
-     * used to mark Fillers methods for Reflection <br>
-     * has name and id as it parameters <br>
-     */
-    @Retention(RetentionPolicy.RUNTIME)
-    @Target(ElementType.METHOD)
-    public @interface SpecAnot {
-        String name();
-        int id() default 0;
-    }
-
-    /**
      * @return arrGR which is used in other fillers as generated array <br>
      * {@code
      * public static int[] arrGenR() {
@@ -126,6 +114,18 @@ public class Fillers {
         Arrays.sort(narr);
         System.out.println(Arrays.toString(narr) + " ");
         return narr;
+    }
+
+    /**
+     * Created annotation <br>
+     * used to mark Fillers methods for Reflection <br>
+     * has name and id as it parameters <br>
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    public @interface SpecAnot {
+        String name();
+        int id() default 0;
     }
 
 }

@@ -10,7 +10,5 @@ public abstract class Sorter {
      * Just abstract method <br>
      * @param arr didn't use
      */
-    public void srt(int[] arr) {
-
-    }
+    public abstract int []  sorter (int[] arr);
 }

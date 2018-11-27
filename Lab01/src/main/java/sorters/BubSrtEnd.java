@@ -15,7 +15,8 @@ public class BubSrtEnd extends BubbleSorter {
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
      * @return int arr[]
      */
-    public int[] srtBubEnd(int arr[]) {
+    @Override
+    public int[] sorter(int arr[]) {
         for ( i = 0; i < arr.length - 1; i++) {
             for ( j = arr.length - 2; j >= 0; j--) {
 
@@ -23,7 +24,7 @@ public class BubSrtEnd extends BubbleSorter {
                 swapper(arr);
             }
         }
-        System.out.print(Arrays.toString(arr) + " ");
+        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
 }

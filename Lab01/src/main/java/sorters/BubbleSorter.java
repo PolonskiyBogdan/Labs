@@ -11,6 +11,9 @@ public class BubbleSorter extends Sorter {
      int i;
      int j;
 
+    public  int []  sorter (int[] arr){
+        return arr;
+    }
     /**
      * In this method we swap the elements of given array <br>
      * @param arr is an array, set in <br>

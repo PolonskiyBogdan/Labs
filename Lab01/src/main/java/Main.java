@@ -1,4 +1,3 @@
-import analyzer.Analyze;
 import static ReflectionAnalyzer.RefAnalyze.refFill;
 import static fillers.Fillers.*;
 
@@ -9,60 +8,24 @@ import static fillers.Fillers.*;
  */
 
 public class Main {
-    //ToDo: check all sorters for understanding
+    //ToDo: rebuild fillers чтоб не зависели друг от друга
+    //ToDo: переделать Sorter
+    //ToDo: переиминовать методы в более длинные
+    //ToDo: перелпределить методы под сортер
+    //ToDo: избавиться от private static int arrGR[] = new int[6]; в филлерах
+    //ToDo: ДОДЕЛАТЬ ReflectionAnalyzer !!!!!!!!
+    //Todo: каждий массив генериться отдельн????
+    //ToDo:
 
     /**
      * Main Method used for summoning Analyze methods <br>
      * @param args command line values
      */
     public static void main(String[] args) {
-        Analyze a = new Analyze();
         arrGenR();
         arrMaMi();
         arrMiMa();
         arrMiMaRX();
         refFill();
-
-//       a.anArrSrtGR();
-//       a.anArrSrtMiMa();
-//       a.anArrSrtMiMaRx();
-//       a.anArrSrtMaMi();
-//
-//       a.anBubStaGR();
-//       a.anBubStaMiMa();
-//       a.anBubStaMiMaRx();
-//       a.anBubStaMaMi();
-//
-//
-//       a.anBubEndGR();
-//       a.anBubEndMiMa();
-//       a.anBubEndMiMaRx();
-//       a.anBubEndMaMi();
-//
-//       a.anQuickGR();
-//       a.anQuickMiMa();
-//       a.anQuickMiMaRx();
-//       a.anQuickMaMi();
-//
-//       a.anMerArrSrtGR();
-//       a.anMerArrSrtMiMa();
-//       a.anMerArrSrtMiMaRx();
-//       a.anMerArrSrtMaMi();
-//
-//       a.anMerBubStaGR();
-//       a.anMerBubStaMiMa();
-//       a.anMerBubStaMiMaRx();
-//       a.anMerBubStaMaMi();
-//
-//       a.anMerBubEndGR();
-//       a.anMerBubEndMiMa();
-//       a.anMerBubEndMiMaRx();
-//       a.anMerBubEndMaMi();
-//
-//       a.anMerQuickGR();
-//       a.anMerQuickMiMa();
-//       a.anMerQuickMiMaRx();
-//       a.anMerQuickMaMi();
-
     }
 }

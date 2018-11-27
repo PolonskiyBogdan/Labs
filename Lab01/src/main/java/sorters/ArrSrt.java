@@ -12,10 +12,11 @@ public class ArrSrt extends Sorter {
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer <br>
      * @return arr
      */
-    public int[] srtArr(int arr[]) {
+    @Override
+    public int[] sorter (int arr[]) {
         Arrays.sort(arr);
 
-        System.out.print(Arrays.toString(arr) + " ");
+        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
 }

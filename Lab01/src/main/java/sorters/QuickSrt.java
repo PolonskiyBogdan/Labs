@@ -16,7 +16,8 @@ public class QuickSrt extends Sorter {
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
      * @return int arr[]
      */
-    public int[] srtQuick(int arr[]) {
+    @Override
+    public int[] sorter(int arr[]) {
         qSort(arr, 0, arr.length-1);
 
         System.out.println(Arrays.toString(arr) + " ");
