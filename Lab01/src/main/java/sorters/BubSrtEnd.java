@@ -2,16 +2,16 @@ package sorters;
 
 import java.util.Arrays;
 /**
- *  Main is a class where Analyze methods are summoned
+ * Here is used  Bubble sorting algorithm that works by repeatedly swapping the adjacent elements <br>
+ * if they are in wrong order. <br>
+ * Sorting starts from the end of array <br>
  * @author Polonskiy
  * @version 1.2
- * Here is used  Bubble sorting algorithm that works by repeatedly swapping the adjacent elements
- * if they are in wrong order.
- * Sorting starts from the end of array
+
  */
 public class BubSrtEnd extends BubbleSorter {
     /**
-     * has called methods showRes(arr), swapper(arr) from {@link BubbleSorter}
+     * has called methods showRes(arr), swapper(arr) from {@link BubbleSorter} <br>
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
      * @return int arr[]
      */

@@ -2,7 +2,7 @@ package analyzer;
 
 import sorters.*;
 /**
- *  used to make objects for old Analyzer
+ *  used to make objects for old Analyzer <br>
  * @deprecated delete in another version
  * @author Polonskiy
  * @version 1.2

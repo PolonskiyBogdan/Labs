@@ -3,9 +3,9 @@ package analyzer;
 import static fillers.Fillers.*;
 /**
 
- * @deprecated delete in another version here were summoned methods from sorters and fillers
- * to analyze time that sorters methods need to sort methods from fillers
- * code look like this
+ * @deprecated delete in another version here were summoned methods from sorters and fillers <br>
+ * to analyze time that sorters methods need to sort methods from fillers <br>
+ * code look like this <br>
  * {@code public void analyze() {
  *         long start = System.nanoTime();
  *         sorter method(filler method);

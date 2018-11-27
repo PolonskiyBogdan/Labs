@@ -3,16 +3,16 @@ package sorters;
 import java.util.Arrays;
 import java.util.Random;
 /**
+ * Here is used QuickSort which is a Divide and Conquer algorithm. <br>
+ * It picks an element as pivot and partitions the given array around the picked pivot. <br>
+ * Here is used picking a random element as pivot. <br>
+ * The key process in quickSort is {@link #partition(int[], int, int)}. <br>
  * @author Polonskiy
  * @version 1.2
- * Here is used QuickSort which is a Divide and Conquer algorithm.
- * It picks an element as pivot and partitions the given array around the picked pivot.
- * Here is used picking a random element as pivot.
- * The key process in quickSort is {@link #partition(int[], int, int)}.
  */
 public class QuickSrt extends Sorter {
     /**
-     * this method set arr, low and high and return sorted array
+     * this method set arr, low and high and return sorted array <br>
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
      * @return int arr[]
      */
@@ -38,7 +38,7 @@ public class QuickSrt extends Sorter {
     }
 
     /**
-     * this method swap different elements of array
+     * this method swap different elements of array <br>
      * @param arr set in {@link #srtQuick(int[])}
      * @param id1 set in {@link #qSort(int[], int, int)}
      * @param id2 set in {@link #qSort(int[], int, int)}
@@ -50,7 +50,7 @@ public class QuickSrt extends Sorter {
     }
 
     /**
-     * Sets random pivot
+     * Sets random pivot <br>
      * @param low set in {@link #srtQuick(int[])}
      * @param high set in {@link #srtQuick(int[])}
      * @return int low, int high
@@ -60,7 +60,7 @@ public class QuickSrt extends Sorter {
         return rand.nextInt((high - low) + 1) + low;
     }
     /**
-     * this method is, given an array and an element x of array as pivot.
+     * this method is, given an array and an element x of array as pivot. <br>
      * @param arr set in {@link #srtQuick(int[])}
      * @param low set in {@link #srtQuick(int[])}
      * @param high set in {@link #srtQuick(int[])}

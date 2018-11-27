@@ -2,12 +2,12 @@ package sorters;
 
 import java.util.Arrays;
 /**
- * @author Polonskiy
- * @version 1.2
- * It is a super class of
+ * Abstract Bubble Class which is a super class of <br>
  * @see BubSrtEnd,BubSrtSta
  * and its super class is
  * @see Sorter
+ * @author Polonskiy
+ * @version 1.2
  */
 public class BubbleSorter extends Sorter {
 
@@ -15,10 +15,10 @@ public class BubbleSorter extends Sorter {
      int j;
 
     /**
-     * In this method we swap the elements of given array
-     * @param arr is an array, set in
-     * @see BubSrtSta#swapper(int[])
-     * @see BubSrtEnd#swapper(int[])
+     * In this method we swap the elements of given array <br>
+     * @param arr is an array, set in <br>
+     * @see BubSrtSta#swapper(int[]) <br>
+     * @see BubSrtEnd#swapper(int[]) <br>
      */
     void swapper(int arr[]){
             if (arr[j] > arr[j + 1]) {
@@ -29,10 +29,10 @@ public class BubbleSorter extends Sorter {
         }
 
     /**
-     * Method show the result of
+     * Method show the result of <br>
      * @see BubSrtSta
      * @see BubSrtEnd
-     * @param arr is an array, set in
+     * @param arr is an array, set in <br>
      * @see BubSrtSta#showRes(int[])
      * @see BubSrtEnd#showRes(int[])
      */

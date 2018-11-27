@@ -1,7 +1,7 @@
 import analyzer.Analyze;
 
 /**
- *  Main is a class where Analyze methods are summoned
+ *  Main is a class where Analyze methods are summoned <br>
  * @author Polonskiy
  * @version 1.2
  */
@@ -10,7 +10,7 @@ public class Main {
     //ToDo: check all sorters for understanding
 
     /**
-     * Main Method used for summoning Analyze methods
+     * Main Method used for summoning Analyze methods <br>
      * @param args command line values
      */
     public static void main(String[] args) {
