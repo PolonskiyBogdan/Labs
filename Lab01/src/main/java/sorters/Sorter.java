@@ -1,7 +1,6 @@
 package sorters;
 /**
  * Abstract Class which is a super class of <br>
- * @see ArrSrt,BubbleSorter,MergeSrt,QuickSrt
  * @author Polonskiy
  * @version 1.2
 

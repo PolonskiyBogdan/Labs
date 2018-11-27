@@ -3,9 +3,6 @@ package sorters;
 import java.util.Arrays;
 /**
  * Abstract Bubble Class which is a super class of <br>
- * @see BubSrtEnd,BubSrtSta
- * and its super class is
- * @see Sorter
  * @author Polonskiy
  * @version 1.2
  */
