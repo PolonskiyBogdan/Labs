@@ -1,7 +1,22 @@
 package analyzer;
 
 import static fillers.Fillers.*;
+/**
 
+ * @deprecated delete in another version here were summoned methods from sorters and fillers
+ * to analyze time that sorters methods need to sort methods from fillers
+ * code look like this
+ * {@code public void analyze() {
+ *         long start = System.nanoTime();
+ *         sorter method(filler method);
+ *         long end = System.nanoTime();
+ *
+ *         System.out.println(end - start);
+ *     }}
+ * @author Polonskiy
+ * @version 1.2
+ *  Old Analyzer
+ */
 public class Analyze implements ObjectSaver {
 
     public void anArrSrtGR() {

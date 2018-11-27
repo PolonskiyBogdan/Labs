@@ -1,11 +1,21 @@
-package output;
-
 import analyzer.Analyze;
+
+/**
+ *  Main is a class where Analyze methods are summoned
+ * @author Polonskiy
+ * @version 1.2
+ */
 
 public class Main {
     //ToDo: check all sorters for understanding
+
+    /**
+     * Main Method used for summoning Analyze methods
+     * @param args command line values
+     */
     public static void main(String[] args) {
         Analyze a = new Analyze();
+
 
 //       a.anArrSrtGR();
 //       a.anArrSrtMiMa();

@@ -1,8 +1,13 @@
 package analyzer;
 
-import fillers.*;
 import sorters.*;
-
+/**
+ *  used to make objects for old Analyzer
+ * @deprecated delete in another version
+ * @author Polonskiy
+ * @version 1.2
+ *
+ */
 public interface ObjectSaver {
     ArrSrt arS = new ArrSrt();
     BubSrtSta bSta = new BubSrtSta();
