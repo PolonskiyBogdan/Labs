@@ -79,9 +79,10 @@ import java.util.Set;
 
         for (int i = 0; i < 4; i++) {
             int [] fillerArray = refFill();
-            for (int j = 0; j < quantityOfSorters; j++) {
+//            for (int j = 0; j < quantityOfSorters; j++) {
+            for (Sorter sorter : sorters) {
                 long startTime = System.nanoTime();
-                    sorters.get(j).sorter(fillerArray);
+                sorter.sorter(fillerArray);
                 long endTime = System.nanoTime();
                 System.out.println(endTime - startTime);
             }
