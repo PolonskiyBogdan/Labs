@@ -1,5 +1,6 @@
-import static ReflectionAnalyzer.ReflectionAnalyzer.refFill;
-import static ReflectionAnalyzer.ReflectionAnalyzer.refSort;
+import ReflectionAnalyzer.ReflectionAnalyzer;
+//import  ReflectionAnalyzer.ReflectionAnalyzer.refFill;
+//import  ReflectionAnalyzer.ReflectionAnalyzer.refSort;
 
 /**
  *  Main is a class where Analyze methods are summoned <br>
@@ -26,7 +27,10 @@ public class Main {
 //        arrMaMi();
 //        arrMiMa();
 //        arrMiMaRX();
-        refFill();
-        refSort();
+        ReflectionAnalyzer reflectionAnalyzer = new ReflectionAnalyzer();
+        reflectionAnalyzer.refFill();
+        reflectionAnalyzer.refSort();
+
+        reflectionAnalyzer.Analyzer();
     }
 }

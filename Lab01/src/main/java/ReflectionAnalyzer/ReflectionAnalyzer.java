@@ -20,15 +20,17 @@ import java.util.Set;
  * @version 1.2
  */
  public class ReflectionAnalyzer {
-  private static List<Sorter> sorters = new ArrayList<>();
-  private static Reflections reflections = new Reflections("sorters");
+  private  List<Sorter> sorters = new ArrayList<>();
+  private  Reflections reflections = new Reflections("sorters");
     /**
      * Method where we get {@link fillers.Fillers} methods using Reflection with annotation
      */
-    public static int[] refFill() {
+    public  int[] refFill() {
 
         Fillers fillers = new Fillers();
         Method[] methods = fillers.getClass().getMethods();
+
+
         int [] array = new int[0];
         for (Method method : methods) {
             SpecAnot specAnot = method.getAnnotation(SpecAnot.class);
@@ -42,13 +44,14 @@ import java.util.Set;
             }
 
         }
+
         return array;
     }
 
     /**
      * Method where we get  Sorters method using Reflection to find all subClasses of {@link sorters.Sorter}
      */
-    public static List<Sorter> refSort() {
+    public  List<Sorter> refSort() {
         Set<Class<? extends Sorter>> subClasses = reflections.getSubTypesOf(Sorter.class);
         for (Class<? extends Sorter> abstractClass : subClasses) {
             if (!Modifier.isAbstract(abstractClass.getModifiers())) {
@@ -63,18 +66,22 @@ import java.util.Set;
 
             }
         }
+        int quantityOfSorters = sorters.size();
+        System.out.println(quantityOfSorters);
         System.out.println(sorters);
         return sorters;
     }
 
     public void Analyzer(){
-        int quantityofSorters = sorters.size();
+//        int quantityOfFillers = array.length;
+//        System.out.println(quantityOfFillers);
+        int quantityOfSorters = sorters.size();
 
         for (int i = 0; i < 4; i++) {
-
-            for (int j = 0; j < quantityofSorters; j++) {
+            int [] fillerArray = refFill();
+            for (int j = 0; j < quantityOfSorters; j++) {
                 long startTime = System.nanoTime();
-
+                    sorters.get(j).sorter(fillerArray);
                 long endTime = System.nanoTime();
                 System.out.println(endTime - startTime);
             }

@@ -43,7 +43,7 @@ public class Fillers {
     /**
      * @return array sorted from Maximum to Minimum <br>
      * {@code
-     * public static int[] arrMaMi() {
+     * <code>public static int[] arrMaMi() {
      *
      *         int[] arr = arrGR;
      *         for (int i = 0; i < arr.length - 1; i++) {
