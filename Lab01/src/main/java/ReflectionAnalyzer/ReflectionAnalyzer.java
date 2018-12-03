@@ -20,8 +20,8 @@ import java.util.Set;
  * @version 1.2
  */
  public class ReflectionAnalyzer {
-   static List<Sorter> sorters = new ArrayList<>();
-   static Reflections reflections = new Reflections("sorters");
+  private static List<Sorter> sorters = new ArrayList<>();
+  private static Reflections reflections = new Reflections("sorters");
     /**
      * Method where we get {@link fillers.Fillers} methods using Reflection with annotation
      */
