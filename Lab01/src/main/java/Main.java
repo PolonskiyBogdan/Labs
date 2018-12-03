@@ -1,4 +1,5 @@
 import static ReflectionAnalyzer.RefAnalyze.refFill;
+import static ReflectionAnalyzer.RefAnalyze.refSort;
 import static fillers.Fillers.*;
 
 /**
@@ -22,10 +23,11 @@ public class Main {
      * @param args command line values
      */
     public static void main(String[] args) {
-        arrGenR();
-        arrMaMi();
-        arrMiMa();
-        arrMiMaRX();
+//        arrGenR();
+//        arrMaMi();
+//        arrMiMa();
+//        arrMiMaRX();
         refFill();
+        refSort();
     }
 }

@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @author Polonskiy
  * @version 1.2
  */
-public class ArrSrt extends Sorter {
+public class ArraySort extends Sorter {
     /**
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer <br>
      * @return arr

@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author Polonskiy
  * @version 1.2
  */
-public class BubbleSorter extends Sorter {
+public abstract class BubbleSorter extends Sorter {
 
      int i;
      int j;
@@ -17,8 +17,8 @@ public class BubbleSorter extends Sorter {
     /**
      * In this method we swap the elements of given array <br>
      * @param arr is an array, set in <br>
-     * @see BubSrtSta#swapper(int[]) <br>
-     * @see BubSrtEnd#swapper(int[]) <br>
+     * @see BubbleSortStart#swapper(int[]) <br>
+     * @see BubbleSortEnd#swapper(int[]) <br>
      */
     void swapper(int arr[]){
             if (arr[j] > arr[j + 1]) {
@@ -30,11 +30,11 @@ public class BubbleSorter extends Sorter {
 
     /**
      * Method show the result of <br>
-     * @see BubSrtSta
-     * @see BubSrtEnd
+     * @see BubbleSortStart
+     * @see BubbleSortEnd
      * @param arr is an array, set in <br>
-     * @see BubSrtSta#showRes(int[])
-     * @see BubSrtEnd#showRes(int[])
+     * @see BubbleSortStart#showRes(int[])
+     * @see BubbleSortEnd#showRes(int[])
      */
     void showRes(int arr[]){
             System.out.print(Arrays.toString(arr) + " ");

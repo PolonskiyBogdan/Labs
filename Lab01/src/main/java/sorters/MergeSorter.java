@@ -9,12 +9,12 @@ import java.util.Arrays;
  * @author Polonskiy
  * @version 1.2
  */
-public class MergeSrt extends Sorter {
+public class MergeSorter extends Sorter {
 
-   private ArrSrt arS = new ArrSrt();
-   private BubSrtSta bSta = new BubSrtSta();
-   private BubSrtEnd bEnd = new BubSrtEnd();
-   private QuickSrt quSrt = new QuickSrt();
+   private ArraySort arS = new ArraySort();
+   private BubbleSortStart bSta = new BubbleSortStart();
+   private BubbleSortEnd bEnd = new BubbleSortEnd();
+   private QuickSort quSrt = new QuickSort();
     @Override
     public int[] sorter(int arr[]) {
         if (arr.length < 2){
@@ -35,7 +35,7 @@ public class MergeSrt extends Sorter {
 
     }
 
-    int[] merge (int[] part1, int[] part2){
+   private void merge (int[] part1, int[] part2){
         int len_1 = part1.length, len_2 = part2.length;
         int a = 0, b = 0, len = len_1 + len_2; // a, b - счетчики в массивах
         int[] result = new int[len];
@@ -50,7 +50,6 @@ public class MergeSrt extends Sorter {
             }
         }
         System.out.println(Arrays.toString(result) + " ");
-        return result;
     }
 
 }

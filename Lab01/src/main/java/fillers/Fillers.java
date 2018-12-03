@@ -18,7 +18,7 @@ public class Fillers {
     private static int arrGR[] = new int[6];
 
     /**
-     * @return arrGR which is used in other fillers as generated array <br>
+     * @return Randomly Generated Array which is used in other fillers as generated array <br>
      * {@code
      * public static int[] arrGenR() {
      *         Random random = new Random();
@@ -29,7 +29,7 @@ public class Fillers {
      *         return arrGR;
      *     }}
      */
-    @SpecAnot(name = "Random Array", id = 1)
+    @SpecAnot(name = "Random Array")
     public static int[] arrGenR() {
 //        int arrGR[] = { 5,1,4,2,8,0,2 };
         Random random = new Random();
@@ -41,7 +41,7 @@ public class Fillers {
     }
 
     /**
-     * @return arr sorted from Maximum to Minimum <br>
+     * @return array sorted from Maximum to Minimum <br>
      * {@code
      * public static int[] arrMaMi() {
      *
@@ -59,7 +59,7 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecAnot(name = "from Maximum to Minimum", id = 2)
+    @SpecAnot(name = "from Maximum to Minimum")
     public static int[] arrMaMi() {
 
         int[] arr = arrGR;
@@ -76,7 +76,7 @@ public class Fillers {
         return arr;
     }
     /**
-     * @return arr sorted from Minimum to Maximum <br>
+     * @return array sorted from Minimum to Maximum <br>
      * {@code
      *  public static int[] arrMiMa() {
      *         int[] arr = arrGR;
@@ -85,7 +85,7 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecAnot(name = "from Minimum to Maximum", id = 3)
+    @SpecAnot(name = "from Minimum to Maximum")
     public static int[] arrMiMa() {
         int[] arr = arrGR;
         Arrays.sort(arr);
@@ -93,7 +93,7 @@ public class Fillers {
         return arr;
     }
     /**
-     * @return arr sorted from Maximum to Minimum + Random number <br>
+     * @return array sorted from Maximum to Minimum + Random number <br>
      * {@code
      * public static int[] arrMiMaRX() {
      *         int[] arr = arrGR;
@@ -105,7 +105,7 @@ public class Fillers {
      *         return narr;
      *     }}
      */
-    @SpecAnot(name = "from Maximum to Minimum + Random number", id = 4)
+    @SpecAnot(name = "from Maximum to Minimum + Random number")
     public static int[] arrMiMaRX() {
         int[] arr = arrGR;
         int[] narr = Arrays.copyOf(arr, arr.length + 1);
@@ -125,7 +125,6 @@ public class Fillers {
     @Target(ElementType.METHOD)
     public @interface SpecAnot {
         String name();
-        int id() default 0;
     }
 
 }

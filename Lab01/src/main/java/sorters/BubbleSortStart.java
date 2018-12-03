@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author Polonskiy
  * @version 1.2
  */
-public class BubSrtSta extends BubbleSorter {
+public class BubbleSortStart extends BubbleSorter {
     /**
      * has called methods showRes(arr), swapper(arr) from {@link BubbleSorter} <br>
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer

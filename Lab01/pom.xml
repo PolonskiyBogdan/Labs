@@ -16,6 +16,13 @@
             </plugin>
         </plugins>
     </build>
+        <dependencies>
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>0.9.10</version>
+            </dependency>
+        </dependencies>
 
     <groupId>Netcracker Labs</groupId>
     <artifactId>Lab01</artifactId>

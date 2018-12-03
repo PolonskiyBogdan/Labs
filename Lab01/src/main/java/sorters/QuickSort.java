@@ -10,7 +10,7 @@ import java.util.Random;
  * @author Polonskiy
  * @version 1.2
  */
-public class QuickSrt extends Sorter {
+public class QuickSort extends Sorter {
     /**
      * this method set arr, low and high and return sorted array <br>
      * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
@@ -26,9 +26,9 @@ public class QuickSrt extends Sorter {
 
     /**
      *
-     * @param arr set in {@link #srtQuick(int[])}
-     * @param low set in {@link #srtQuick(int[])}
-     * @param high set in {@link #srtQuick(int[])}
+     * @param arr set in {@link #sorter(int[])}
+     * @param low set in {@link #sorter(int[])}
+     * @param high set in {@link #sorter(int[])}
      */
     private void qSort(int[] arr, int low, int high) {
         if (low < high + 1) {
@@ -40,7 +40,7 @@ public class QuickSrt extends Sorter {
 
     /**
      * this method swap different elements of array <br>
-     * @param arr set in {@link #srtQuick(int[])}
+     * @param arr set in {@link #sorter(int[])}
      * @param id1 set in {@link #qSort(int[], int, int)}
      * @param id2 set in {@link #qSort(int[], int, int)}
      */
@@ -52,8 +52,8 @@ public class QuickSrt extends Sorter {
 
     /**
      * Sets random pivot <br>
-     * @param low set in {@link #srtQuick(int[])}
-     * @param high set in {@link #srtQuick(int[])}
+     * @param low set in {@link #sorter(int[])}
+     * @param high set in {@link #sorter(int[])}
      * @return int low, int high
      */
     private int getPivot(int low, int high) {
@@ -62,9 +62,9 @@ public class QuickSrt extends Sorter {
     }
     /**
      * this method is, given an array and an element x of array as pivot. <br>
-     * @param arr set in {@link #srtQuick(int[])}
-     * @param low set in {@link #srtQuick(int[])}
-     * @param high set in {@link #srtQuick(int[])}
+     * @param arr set in {@link #sorter(int[])}
+     * @param low set in {@link #sorter(int[])}
+     * @param high set in {@link #sorter(int[])}
      * @return border
      */
     private int partition(int[] arr, int low, int high) {
