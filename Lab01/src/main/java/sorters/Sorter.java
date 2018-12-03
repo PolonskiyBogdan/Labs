@@ -9,6 +9,7 @@ public abstract class Sorter {
     /**
      * Just abstract method <br>
      * @param arr didn't use
+     * @return nothing
      */
-    public abstract int []  sorter (int[] arr);
+    public  abstract int []  sorter (int[] arr);
 }

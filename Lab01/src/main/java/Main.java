@@ -1,6 +1,5 @@
-import static ReflectionAnalyzer.RefAnalyze.refFill;
-import static ReflectionAnalyzer.RefAnalyze.refSort;
-import static fillers.Fillers.*;
+import static ReflectionAnalyzer.ReflectionAnalyzer.refFill;
+import static ReflectionAnalyzer.ReflectionAnalyzer.refSort;
 
 /**
  *  Main is a class where Analyze methods are summoned <br>
