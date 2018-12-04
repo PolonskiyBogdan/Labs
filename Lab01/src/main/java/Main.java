@@ -1,6 +1,4 @@
 import ReflectionAnalyzer.ReflectionAnalyzer;
-//import  ReflectionAnalyzer.ReflectionAnalyzer.refFill;
-//import  ReflectionAnalyzer.ReflectionAnalyzer.refSort;
 
 /**
  *  Main is a class where Analyze methods are summoned <br>

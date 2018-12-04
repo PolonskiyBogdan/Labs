@@ -1,6 +1,6 @@
 package sorters;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Random;
 /**
  * Here is used QuickSort which is a Divide and Conquer algorithm. <br>

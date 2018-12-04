@@ -23,11 +23,8 @@ import java.util.Set;
      * Method where we get {@link fillers.Fillers} methods using Reflection with annotation
      */
     private   int[] refFill() {
-
         Fillers fillers = new Fillers();
         Method[] methods = fillers.getClass().getMethods();
-
-
         int [] array = new int[0];
         for (Method method : methods) {
             SpecAnot specAnot = method.getAnnotation(SpecAnot.class);
@@ -41,7 +38,6 @@ import java.util.Set;
             }
 
         }
-
         return array;
     }
 
@@ -54,7 +50,6 @@ import java.util.Set;
         Set<Class<? extends Sorter>> subClasses = reflections.getSubTypesOf(Sorter.class);
         for (Class<? extends Sorter> abstractClass : subClasses) {
             if (!Modifier.isAbstract(abstractClass.getModifiers())) {
-
                 try {
                     Sorter sorter = abstractClass.newInstance();
                     sorterArrayList.add(sorter);
@@ -62,7 +57,6 @@ import java.util.Set;
                 } catch (IllegalAccessException | InstantiationException e) {
                     e.printStackTrace();
                   }
-
             }
         }
 //        int quantityOfSorters = sorterArrayList.size();
