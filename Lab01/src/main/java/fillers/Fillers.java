@@ -35,6 +35,7 @@ public class Fillers {
     public static int[] getRandomlyGeneratedArray() {
 //        System.out.println(Arrays.toString(arrGR) + " ");
         return arrayGeneator();
+//        return null;
     }
 
     /**
