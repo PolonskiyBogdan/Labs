@@ -7,11 +7,7 @@ import ReflectionAnalyzer.ReflectionAnalyzer;
  */
 
 public class Main {
-    //ToDo: rebuild fillers чтоб не зависели друг от друга
-    //ToDo: избавиться от private static int arrGR[] = new int[6]; в филлерах
-    //Todo: каждий массив генериться отдельн????
-
-    /**
+     /**
      * Main Method used for summoning Analyze methods <br>
      * @param args command line values
      */

@@ -1,7 +1,6 @@
 package ReflectionAnalyzer;
-
-import static fillers.Fillers.*;
 import fillers.Fillers;
+import fillers.SpecialAnnotation;
 import org.reflections.Reflections;
 import sorters.Sorter;
 import java.lang.reflect.Method;
@@ -10,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-
 
 /**
  *  Class where Reflection methods for Filler and Sorters are created.
@@ -27,16 +25,15 @@ import java.util.Set;
         Method[] methods = fillers.getClass().getMethods();
         int [] array = new int[0];
         for (Method method : methods) {
-            SpecAnot specAnot = method.getAnnotation(SpecAnot.class);
-            if (specAnot != null) {
+            SpecialAnnotation specialAnnotation = method.getAnnotation(SpecialAnnotation.class);
+            if (specialAnnotation != null) {
                 try {
-                   array =(int[]) method.invoke(specAnot);
+                   array =(int[]) method.invoke(specialAnnotation);
                     System.out.println(Arrays.toString(array));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-
         }
         return array;
     }

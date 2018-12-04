@@ -1,9 +1,4 @@
 package fillers;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 import java.util.Arrays;
 import java.util.Random;
 /**
@@ -12,7 +7,6 @@ import java.util.Random;
  * @version 1.2
  */
 public class Fillers {
-
     private static Random random = new Random();
     /**
      *  generates unsorted Array
@@ -37,7 +31,7 @@ public class Fillers {
      *         return arrGR;
      *     }}
      */
-    @SpecAnot(name = "Random Array")
+    @SpecialAnnotation(name = "Random Array")
     public static int[] getRandomlyGeneratedArray() {
 //        System.out.println(Arrays.toString(arrGR) + " ");
         return arrayGeneator();
@@ -62,7 +56,7 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecAnot(name = "from Maximum to Minimum")
+    @SpecialAnnotation(name = "from Maximum to Minimum")
     public static int[] getArraySortedMaximumToMinimum() {
 
         int[] arr = arrayGeneator();
@@ -88,7 +82,7 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecAnot(name = "from Minimum to Maximum")
+    @SpecialAnnotation(name = "from Minimum to Maximum")
     public static int[] getArraySortedMinimumToMaximum() {
         int[] arr = arrayGeneator();
         Arrays.sort(arr);
@@ -108,7 +102,7 @@ public class Fillers {
      *         return narr;
      *     }}
      */
-    @SpecAnot(name = "from Maximum to Minimum + Random number")
+    @SpecialAnnotation(name = "from Maximum to Minimum + Random number")
     public static int[] getArraySortedMinimumMaximumPlusRandNum() {
         int[] arr = arrayGeneator();
         int[] narr = Arrays.copyOf(arr, arr.length + 1);
@@ -117,17 +111,6 @@ public class Fillers {
         Arrays.sort(narr);
 //        System.out.println(Arrays.toString(narr) + " ");
         return narr;
-    }
-
-    /**
-     * Created annotation <br>
-     * used to mark Fillers methods for Reflection <br>
-     * has name as it parameter
-     */
-    @Retention(RetentionPolicy.RUNTIME)
-    @Target(ElementType.METHOD)
-    public @interface SpecAnot {
-        String name();
     }
 
 }
