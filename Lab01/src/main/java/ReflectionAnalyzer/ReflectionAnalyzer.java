@@ -62,7 +62,11 @@ import java.util.Set;
         return sorterArrayList;
     }
 
-    public void Analyzer(){
+    /**
+     * Method that analyze speed of .... Sorters from{@link #refSort()} and Fillers from {@link #refFill()}<>br</>
+     *
+     */
+    public void analyzer(){
 //        int quantityOfFillers = array.length;
 //        System.out.println(quantityOfFillers);
 //        int quantityOfSorters = sorterArrayList.size();

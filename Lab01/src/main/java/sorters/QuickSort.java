@@ -13,7 +13,7 @@ import java.util.Random;
 public class QuickSort extends Sorter {
     /**
      * this method set arr, low and high and return sorted array <br>
-     * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
+     * @param arr is an array, get from {@link fillers.Fillers} and set in analyzer
      * @return int arr[]
      */
     @Override

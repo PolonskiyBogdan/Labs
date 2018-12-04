@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class BubbleSortStart extends BubbleSorter {
     /**
      * has called methods showRes(arr), swapper(arr) from {@link BubbleSorter} <br>
-     * @param arr is an array, get from {@link fillers.Fillers} and set in Analyzer
+     * @param arr is an array, get from {@link fillers.Fillers} and set in analyzer
      * @return int arr[]
      */
     @Override
