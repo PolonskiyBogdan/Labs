@@ -36,7 +36,7 @@ public class Fillers {
         for (int i = 0; i < arrGR.length; i++) {
             arrGR[i] = random.nextInt(10);
         }
-        System.out.println(Arrays.toString(arrGR) + " ");
+//        System.out.println(Arrays.toString(arrGR) + " ");
         return arrGR;
     }
 
@@ -72,7 +72,7 @@ public class Fillers {
                 }
             }
         }
-        System.out.println(Arrays.toString(arr) + " ");
+//        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
     /**
@@ -89,7 +89,7 @@ public class Fillers {
     public static int[] arrMiMa() {
         int[] arr = arrGR;
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr) + " ");
+//        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
     /**
@@ -112,7 +112,7 @@ public class Fillers {
         Random random = new Random();
         narr[narr.length - 1] = random.nextInt(30);
         Arrays.sort(narr);
-        System.out.println(Arrays.toString(narr) + " ");
+//        System.out.println(Arrays.toString(narr) + " ");
         return narr;
     }
 

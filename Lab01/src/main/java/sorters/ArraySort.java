@@ -15,8 +15,8 @@ public class ArraySort extends Sorter {
     @Override
     public int[] sorter (int arr[]) {
         Arrays.sort(arr);
-
-        System.out.println(Arrays.toString(arr) + " ");
+//        System.out.println("Array sortt");
+//        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
 }

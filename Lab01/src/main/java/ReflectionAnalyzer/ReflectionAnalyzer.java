@@ -4,8 +4,6 @@ import static fillers.Fillers.*;
 import fillers.Fillers;
 import org.reflections.Reflections;
 import sorters.Sorter;
-
-
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -20,12 +18,11 @@ import java.util.Set;
  * @version 1.2
  */
  public class ReflectionAnalyzer {
-  private  List<Sorter> sorters = new ArrayList<>();
-  private  Reflections reflections = new Reflections("sorters");
+//int counter= 0;
     /**
      * Method where we get {@link fillers.Fillers} methods using Reflection with annotation
      */
-    public  int[] refFill() {
+    private   int[] refFill() {
 
         Fillers fillers = new Fillers();
         Method[] methods = fillers.getClass().getMethods();
@@ -51,14 +48,16 @@ import java.util.Set;
     /**
      * Method where we get  Sorters method using Reflection to find all subClasses of {@link sorters.Sorter}
      */
-    public  List<Sorter> refSort() {
+    private   List<Sorter> refSort() {
+        Reflections reflections = new Reflections("sorters");
+        List<Sorter> sorterArrayList = new ArrayList<>();
         Set<Class<? extends Sorter>> subClasses = reflections.getSubTypesOf(Sorter.class);
         for (Class<? extends Sorter> abstractClass : subClasses) {
             if (!Modifier.isAbstract(abstractClass.getModifiers())) {
 
                 try {
                     Sorter sorter = abstractClass.newInstance();
-                    sorters.add(sorter);
+                    sorterArrayList.add(sorter);
 
                 } catch (IllegalAccessException | InstantiationException e) {
                     e.printStackTrace();
@@ -66,25 +65,28 @@ import java.util.Set;
 
             }
         }
-        int quantityOfSorters = sorters.size();
-        System.out.println(quantityOfSorters);
-        System.out.println(sorters);
-        return sorters;
+//        int quantityOfSorters = sorterArrayList.size();
+//        System.out.println(quantityOfSorters);
+        System.out.println(sorterArrayList);
+        return sorterArrayList;
     }
 
     public void Analyzer(){
 //        int quantityOfFillers = array.length;
 //        System.out.println(quantityOfFillers);
-        int quantityOfSorters = sorters.size();
+//        int quantityOfSorters = sorterArrayList.size();
+        int [] fillerArray = refFill();
+        List<Sorter> sorterArrayList = refSort();
 
         for (int i = 0; i < 4; i++) {
-            int [] fillerArray = refFill();
 //            for (int j = 0; j < quantityOfSorters; j++) {
-            for (Sorter sorter : sorters) {
+            for (Sorter sorter : sorterArrayList) {
                 long startTime = System.nanoTime();
                 sorter.sorter(fillerArray);
+//                counter++;
                 long endTime = System.nanoTime();
                 System.out.println(endTime - startTime);
+//                System.out.println(counter);
             }
         }
     }

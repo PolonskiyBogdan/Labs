@@ -20,7 +20,9 @@ public class QuickSort extends Sorter {
     public int[] sorter(int arr[]) {
         qSort(arr, 0, arr.length-1);
 
-        System.out.println(Arrays.toString(arr) + " ");
+//        System.out.println("Quick sort");
+
+//        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
 

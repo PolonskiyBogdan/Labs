@@ -20,11 +20,13 @@ public class BubbleSortEnd extends BubbleSorter {
         for ( i = 0; i < arr.length - 1; i++) {
             for ( j = arr.length - 2; j >= 0; j--) {
 
-                showRes(arr);
+//                showRes(arr);
                 swapper(arr);
             }
         }
-        System.out.println(Arrays.toString(arr) + " ");
+//        System.out.println("Buble end");
+
+//        System.out.println(Arrays.toString(arr) + " ");
         return arr;
     }
 }

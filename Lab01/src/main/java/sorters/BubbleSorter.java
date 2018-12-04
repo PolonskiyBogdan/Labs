@@ -8,18 +8,16 @@ import java.util.Arrays;
  */
 public abstract class BubbleSorter extends Sorter {
 
-     int i;
-     int j;
-
-    public  int []  sorter (int[] arr){
-        return arr;
-    }
+    public abstract int []  sorter (int[] arr);
+    int i;
+    int j;
     /**
      * In this method we swap the elements of given array <br>
      * @param arr is an array, set in <br>
      * @see BubbleSortStart#swapper(int[]) <br>
      * @see BubbleSortEnd#swapper(int[]) <br>
      */
+
     void swapper(int arr[]){
             if (arr[j] > arr[j + 1]) {
                 int temp = arr[j];
@@ -28,16 +26,16 @@ public abstract class BubbleSorter extends Sorter {
             }
         }
 
-    /**
-     * Method show the result of <br>
-     * @see BubbleSortStart
-     * @see BubbleSortEnd
-     * @param arr is an array, set in <br>
-     * @see BubbleSortStart#showRes(int[])
-     * @see BubbleSortEnd#showRes(int[])
-     */
-    void showRes(int arr[]){
-            System.out.print(Arrays.toString(arr) + " ");
-            System.out.println("i =" + i + " j =" + j);
-        }
+//    /**
+//     * Method show the result of <br>
+//     * @see BubbleSortStart
+//     * @see BubbleSortEnd
+//     * @param arr is an array, set in <br>
+//     * @see BubbleSortStart#showRes(int[])
+//     * @see BubbleSortEnd#showRes(int[])
+//     */
+//    void showRes(int arr[]){
+//            System.out.print(Arrays.toString(arr) + " ");
+//            System.out.println("i =" + i + " j =" + j);
+//        }
 }
