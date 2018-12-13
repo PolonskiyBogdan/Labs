@@ -7,6 +7,7 @@ import java.util.Arrays;
  * @author Polonskiy
  * @version 1.2
  */
+@AnotSorterClass(name ="ArraySort")
 public class ArraySort extends Sorter {
     /**
      * @param arr is an array, get from {@link fillers.Fillers} and set in analyzer <br>

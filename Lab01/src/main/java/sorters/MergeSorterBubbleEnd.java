@@ -2,6 +2,7 @@ package sorters;
 
 import java.util.Arrays;
 
+@AnotSorterClass (name ="MergeSorterBubbleEnd")
 public class MergeSorterBubbleEnd extends MergeSorter {
     private BubbleSortEnd bEnd = new BubbleSortEnd();
 

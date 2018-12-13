@@ -1,4 +1,7 @@
 import ReflectionAnalyzer.ReflectionAnalyzer;
+import excel.ExcelCreator;
+
+import  static  fillers.Fillers.*;
 
 /**
  *  Main is a class where Analyze methods are summoned <br>
@@ -14,6 +17,13 @@ public class Main {
     public static void main(String[] args) {
 
         ReflectionAnalyzer reflectionAnalyzer = new ReflectionAnalyzer();
-        reflectionAnalyzer.analyzer();
+        ExcelCreator excelCreator = new ExcelCreator();
+        System.out.println(excelCreator.columns);
+        for (int i = 0; i < 1; i++) {
+            reflectionAnalyzer.analyzer();
+            System.out.println("N = " + getN());
+            setN(100 + getN());
+        }
     }
 }
+

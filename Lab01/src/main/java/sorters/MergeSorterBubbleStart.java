@@ -2,6 +2,7 @@ package sorters;
 
 import java.util.Arrays;
 
+@AnotSorterClass (name ="MergeSorterBubbleStart")
 public class MergeSorterBubbleStart extends MergeSorter{
     private BubbleSortStart bSta = new BubbleSortStart();
     @Override

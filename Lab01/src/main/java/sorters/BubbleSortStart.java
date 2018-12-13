@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @author Polonskiy
  * @version 1.2
  */
+@AnotSorterClass (name ="BubbleSortStart")
 public class BubbleSortStart extends BubbleSorter {
     /**
      * has called methods showRes(arr), swapper(arr) from {@link BubbleSorter} <br>

@@ -2,6 +2,7 @@ package sorters;
 
 import java.util.Arrays;
 
+@AnotSorterClass (name ="MergeSorterQuickSort")
 public class MergeSorterQuickSort extends MergeSorter {
     private QuickSort quSrt = new QuickSort();
 

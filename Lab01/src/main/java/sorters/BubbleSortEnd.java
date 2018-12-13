@@ -9,6 +9,7 @@ import java.util.Arrays;
  * @version 1.2
 
  */
+@AnotSorterClass (name ="BubbleSortEnd")
 public class BubbleSortEnd extends BubbleSorter {
     /**
      * has called methods showRes(arr), swapper(arr) from {@link BubbleSorter} <br>
@@ -16,6 +17,7 @@ public class BubbleSortEnd extends BubbleSorter {
      * @return int arr[]
      */
     @Override
+
     public int[] sorter(int arr[]) {
         for ( i = 0; i < arr.length - 1; i++) {
             for ( j = arr.length - 2; j >= 0; j--) {

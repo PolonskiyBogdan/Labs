@@ -10,6 +10,8 @@ import java.util.Random;
  * @author Polonskiy
  * @version 1.2
  */
+
+@AnotSorterClass (name ="QuickSort")
 public class QuickSort extends Sorter {
     /**
      * this method set arr, low and high and return sorted array <br>

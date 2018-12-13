@@ -8,12 +8,21 @@ import java.util.Random;
  */
 public class Fillers {
     private static Random random = new Random();
+    private static int N = 100;
+
+    public static int getN() {
+        return N;
+    }
+
+    public static void setN(int n) {
+        N = n;
+    }
+
     /**
      *  generates unsorted Array
      */
-    private static int [] arrayGeneator(){
-        //        int arrGR[] = { 5,1,4,2,8,0,2 };
-        int[] generatedArray = new int[30];
+    private static int [] arrayGeneator(int N){
+        int[] generatedArray = new int[N];
         for (int i = 0; i < generatedArray.length; i++) {
             generatedArray[i] = random.nextInt(10);
         }
@@ -31,10 +40,10 @@ public class Fillers {
      *         return arrGR;
      *     }}
      */
-    @SpecialAnnotation(name = "Random Array")
+    @SpecialAnnotation(name = "getRandomlyGeneratedArray")
     public static int[] getRandomlyGeneratedArray() {
 //        System.out.println(Arrays.toString(arrGR) + " ");
-        return arrayGeneator();
+        return arrayGeneator(N);
 //        return null;
     }
 
@@ -57,10 +66,10 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecialAnnotation(name = "from Maximum to Minimum")
+    @SpecialAnnotation(name = "getArraySortedMaximumToMinimum")
     public static int[] getArraySortedMaximumToMinimum() {
 
-        int[] arr = arrayGeneator();
+        int[] arr = arrayGeneator(N);
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] < arr[j + 1]) {
@@ -83,9 +92,9 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecialAnnotation(name = "from Minimum to Maximum")
+    @SpecialAnnotation(name = "getArraySortedMinimumToMaximum")
     public static int[] getArraySortedMinimumToMaximum() {
-        int[] arr = arrayGeneator();
+        int[] arr = arrayGeneator(N);
         Arrays.sort(arr);
 //        System.out.println(Arrays.toString(arr) + " ");
         return arr;
@@ -103,9 +112,9 @@ public class Fillers {
      *         return narr;
      *     }}
      */
-    @SpecialAnnotation(name = "from Maximum to Minimum + Random number")
+    @SpecialAnnotation(name = "getArraySortedMinimumMaximumPlusRandNum")
     public static int[] getArraySortedMinimumMaximumPlusRandNum() {
-        int[] arr = arrayGeneator();
+        int[] arr = arrayGeneator(N);
         int[] narr = Arrays.copyOf(arr, arr.length + 1);
         Random random = new Random();
         narr[narr.length - 1] = random.nextInt(30);
