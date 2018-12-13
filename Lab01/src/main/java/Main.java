@@ -19,6 +19,7 @@ public class Main {
         ReflectionAnalyzer reflectionAnalyzer = new ReflectionAnalyzer();
         ExcelCreator excelCreator = new ExcelCreator();
         System.out.println(excelCreator.columns);
+        System.out.println(excelCreator.nocolumns);
         for (int i = 0; i < 1; i++) {
             reflectionAnalyzer.analyzer();
             System.out.println("N = " + getN());

@@ -31,6 +31,7 @@ public class ReflectionMethodsNames {
             if (specialAnnotation != null) {
                 try {
                     fillersList.add(method.getName());
+                    fillersList.sort(String::compareTo);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -50,6 +51,7 @@ public class ReflectionMethodsNames {
             if (anotSorterClass != null) {
                 try {
                     sorterListName.add(abstractClass.getSimpleName());
+                    sorterListName.sort(String::compareTo);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

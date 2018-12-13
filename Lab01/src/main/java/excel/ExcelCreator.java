@@ -11,8 +11,7 @@ import java.util.List;
  */
 public class ExcelCreator {
     private ReflectionMethodsNames reflectionMethodsNames = new ReflectionMethodsNames();
-    public List<String> columns = reflectionMethodsNames.getRefFillName();
-
+    public List<String> columns = reflectionMethodsNames.getRefSortName();
 
 
 }
