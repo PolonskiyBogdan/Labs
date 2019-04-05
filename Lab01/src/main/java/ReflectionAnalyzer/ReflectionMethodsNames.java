@@ -1,5 +1,7 @@
 package ReflectionAnalyzer;
 
+import excel.RowsNames;
+import excel.SheetName;
 import fillers.Fillers;
 import fillers.SpecialAnnotation;
 import org.reflections.Reflections;
@@ -19,10 +21,12 @@ import java.util.Set;
 public class ReflectionMethodsNames {
     private Fillers fillers = new Fillers();
     private Reflections reflections = new Reflections("sorters");
-
+    RowsNames rowsNames = new RowsNames();
+    SheetName sheetName = new SheetName();
     /**
      * Method where we get names of {@link fillers.Fillers} methods using Reflection with annotation
      */
+
     public List<String> getRefFillName() {
         List<String> fillersList =  new ArrayList<>();
         Method[] methods = fillers.getClass().getMethods();
@@ -30,13 +34,14 @@ public class ReflectionMethodsNames {
             SpecialAnnotation specialAnnotation = method.getAnnotation(SpecialAnnotation.class);
             if (specialAnnotation != null) {
                 try {
-                    fillersList.add(method.getName());
-                    fillersList.sort(String::compareTo);
+                    fillersList.add(specialAnnotation.name());
+                    sheetName.setSheetname(fillersList);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }
+//        System.out.println(fillersList);
         return fillersList;
     }
 
@@ -52,6 +57,7 @@ public class ReflectionMethodsNames {
                 try {
                     sorterListName.add(abstractClass.getSimpleName());
                     sorterListName.sort(String::compareTo);
+                    rowsNames.setRows(sorterListName);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

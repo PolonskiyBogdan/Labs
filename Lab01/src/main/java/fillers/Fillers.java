@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class Fillers {
     private static Random random = new Random();
-    private static int N = 100;
+    private static int N = 10;
 
     public static int getN() {
         return N;
@@ -40,7 +40,8 @@ public class Fillers {
      *         return arrGR;
      *     }}
      */
-    @SpecialAnnotation(name = "getRandomlyGeneratedArray")
+
+    @SpecialAnnotation(name = "RandomlyGeneratedArray")
     public static int[] getRandomlyGeneratedArray() {
 //        System.out.println(Arrays.toString(arrGR) + " ");
         return arrayGeneator(N);
@@ -66,7 +67,9 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecialAnnotation(name = "getArraySortedMaximumToMinimum")
+
+    @SpecialAnnotation(name = "ArraySortedMaximumToMinimum")
+
     public static int[] getArraySortedMaximumToMinimum() {
 
         int[] arr = arrayGeneator(N);
@@ -92,7 +95,9 @@ public class Fillers {
      *         return arr;
      *     }}
      */
-    @SpecialAnnotation(name = "getArraySortedMinimumToMaximum")
+
+    @SpecialAnnotation(name = "ArraySortedMinimumToMaximum")
+
     public static int[] getArraySortedMinimumToMaximum() {
         int[] arr = arrayGeneator(N);
         Arrays.sort(arr);
@@ -112,7 +117,10 @@ public class Fillers {
      *         return narr;
      *     }}
      */
-    @SpecialAnnotation(name = "getArraySortedMinimumMaximumPlusRandNum")
+
+
+    @SpecialAnnotation(name = "ArraySortedMinimumMaximumPlusRandNum")
+
     public static int[] getArraySortedMinimumMaximumPlusRandNum() {
         int[] arr = arrayGeneator(N);
         int[] narr = Arrays.copyOf(arr, arr.length + 1);

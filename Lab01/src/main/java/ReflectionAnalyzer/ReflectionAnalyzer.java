@@ -1,4 +1,6 @@
 package ReflectionAnalyzer;
+
+import excel.Datatime;
 import fillers.Fillers;
 import fillers.SpecialAnnotation;
 import org.reflections.Reflections;
@@ -6,6 +8,7 @@ import sorters.Sorter;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
+
 
 /**
  *  Class where Reflection methods for Filler and Sorters are created.
@@ -17,17 +20,21 @@ import java.util.*;
      * Method where we get {@link fillers.Fillers} methods using Reflection with annotation
      */
 //    private int counter= 0;
-    private int[] refFill() {
+    Datatime datatime = new Datatime();
+    private int [] refFill() {
         Fillers fillers = new Fillers();
+
+        List<Object> list = new ArrayList<>();
         int [] array = new int[0];
         Method[] methods = fillers.getClass().getMethods();
             for (Method method : methods) {
             SpecialAnnotation specialAnnotation = method.getAnnotation(SpecialAnnotation.class);
+            list.add(specialAnnotation);
             if (specialAnnotation != null) {
                 try {
                    array =(int[]) method.invoke(specialAnnotation);
-//                    System.out.println(method.getName());
-                    System.out.println(Arrays.toString(array));
+//                    System.out.println(Arrays.toString(array));
+//                    System.out.println(specialAnnotation.name());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -35,7 +42,6 @@ import java.util.*;
         }
         return array;
     }
-
 
     /**
      * Method where we get  Sorters method using Reflection to find all subClasses of {@link sorters.Sorter}
@@ -47,16 +53,15 @@ import java.util.*;
         for (Class<? extends Sorter> abstractClass : subClasses) {
             if (!Modifier.isAbstract(abstractClass.getModifiers())) {
                 try {
-
                     Sorter sorter = abstractClass.newInstance();
                     sorterArrayList.add(sorter);
+                    sorterArrayList.sort(new MyComparatorForSorter());
 
                 } catch (IllegalAccessException | InstantiationException e) {
                     e.printStackTrace();
                   }
             }
         }
-        sorterArrayList.sort(new MyComparator());
 //        System.out.println(sorterArrayList);
         return sorterArrayList;
     }
@@ -64,21 +69,27 @@ import java.util.*;
     /**
      * Method that analyze speed of  Sorters from{@link #refSort()} and Fillers from {@link #refFill()}
      */
-    public void analyzer(){
-        List<Sorter> sorterArrayList = refSort();
-        int [] fillerArray = refFill();
+    public List<Long> analyzer(){
+        int[] array =refFill();
+         List<Sorter> sorterArrayList = refSort();
+
+        List<Long> timelist = new ArrayList<>();
+
         for (int i = 0; i < 4; i++) {
             for (Sorter sorter : sorterArrayList) {
                 long startTime = System.nanoTime();
-                sorter.sorter(fillerArray);
+                sorter.sorter(array);
                 long endTime = System.nanoTime();
-                System.out.println(endTime - startTime);
-//                counter++;
-//                System.out.println("number of sorts =" + counter);
+                timelist.add(endTime - startTime);
+//                System.out.println(endTime - startTime);
+
+
             }
         }
+        System.out.println(timelist);
+        datatime.setTime(timelist);
+        return timelist;
     }
-
 
  }
 
