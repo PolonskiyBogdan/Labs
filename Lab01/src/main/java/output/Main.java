@@ -1,12 +1,14 @@
 package output;
 
 import ReflectionAnalyzer.ReflectionAnalyzer;
-//import ReflectionAnalyzer.ReflectionMethodsNames;
+import ReflectionAnalyzer.ReflectionMethodsNames;
 import excel.Datatime;
 import excel.ExcelCreator;
 import excel.RowsNames;
 import excel.SheetName;
+import fillers.Fillers;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import sorters.MergeSorterArraySort;
 
 import java.io.IOException;
 
@@ -30,8 +32,9 @@ public class Main {
         RowsNames rowsNames = new RowsNames();
         SheetName sheetName = new SheetName();
         Datatime datatime = new Datatime();
-
-        for (int i = 0; i < 10; i++) {
+        Fillers fillers =new Fillers();
+        MergeSorterArraySort mergeSorterArraySort = new MergeSorterArraySort();
+        for (int i = 0; i < 1; i++) {
             reflectionAnalyzer.analyzer();
 
 //            System.out.println(excelCreator.columns);
